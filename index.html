@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://kit.fontawesome.com/2aaa300193.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Bibliophile Haven</title>
+</head>
+
+<body class="bg-gray-200 text-lg font-[Open-Sans]">
+    <nav class="flex bg-white flex flex-wrap items-center justify-around">
+        <img class="w-34 h-20" src="logo.png" alt="" />
+        <div class="flex flex-wrap">
+            <a class="mx-4 text-xl text-[#8c6642] hover:text-gray-200" href="index.html">Home</a>
+            <a class="mx-4 text-xl text-[#8c6642] hover:text-gray-200" href="favorites.html">Favorites</a>
+            <a class="mx-4 text-xl text-[#8c6642] hover:text-gray-200" href="readinglist.html">Reading List</a>
+            <a class="mx-4 text-xl text-[#8c6642] hover:text-gray-200" href="inventory.html">Inventory</a>
+        </div>
+        <div
+            class="shadow text-xl text-[#8c6642] hover:bg-gray-200 hover:cursor-pointer py-1 px-3 items-center rounded">
+            Login
+        </div>
+    </nav>
+    <br />
+    <div class="m-4">
+        <input class="px-3 py-1 border-1 mr-6 mt-2 rounded-lg outline-1 focus:outline-[#8c6642] w-1/2" type="search"
+            placeholder="  Search . . . " />
+        <select class="px-3 py-1 border-1 ml-6 mt-2 mr-6 rounded-lg outline-1 focus:outline-[#8c6642] text-center"
+            name="authorFilter" id="genreFilter">
+            <option value="">-</option>
+            <option value="author1">Author1</option>
+            <option value="author2">Author2</option>
+            <option value="author3">Author3</option>
+            <option value="author4">Author4</option>
+        </select>
+        <select class="px-3 py-1 border-1 ml-6 mt-2 rounded-lg outline-1 focus:outline-[#8c6642] text-center"
+            name="authorFilter" id="authorFilter">
+            <option value="">-</option>
+            <option value="genre1">genre1</option>
+            <option value="genre2">genre2</option>
+            <option value="genre3">genre3</option>
+            <option value="genre4">genre4</option>
+        </select>
+    </div>
+    <div id="booksContainer" class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 rounded m-4">
+        <!-- <div class="shadow bg-[#8c6642] text-white rounded p-4 m-2">
+            <p id="cover"></p>
+            <p id="title"></p>
+            <p id="author"></p>
+            <p id="genre"></p>
+            <div class="flex inline-block space-x-32">
+                <button class="bg-white rounded mt-2 px-2 text-black">Borrow</button>
+                <button class="bg-white rounded mt-2 px-2 text-black">Details</button>
+            </div>
+
+        </div> -->
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

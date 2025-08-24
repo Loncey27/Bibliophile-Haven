@@ -27,10 +27,10 @@ function renderBooks(bookList) {
                 <p class="px-4 mx-4">${book.title}</p>
                 <p class="px-4 mx-4">${book.author}</p>
                 <p class="px-4 mx-4">${book.genre}</p>
-                <span class="text-red-600 p-1 "><i class="fa-solid fa-heart"></i></span>
-                <div class="mx-4 px-4 py-3 flex nowrap space-x-10">
+                <div class="mx-4 px-4 py-3 flex nowrap space-x-4 items-center justify-center">
                     <button class="bg-gray-500 text-white rounded mt-2 px-1 py-1 hover:bg-[#8c6642] text-black">Borrow</button>
                     <button class="bg-gray-500 text-white rounded mt-2 px-1 py-1 hover:bg-[#8c6642] text-black">Details</button>
+                    <span class="text-red-600 p-1 mt-4 "><i class="fa-solid fa-heart"></i></span>
                 </div>
             `
         booksContainer.appendChild(bookCard);
@@ -70,3 +70,24 @@ function filterByGenre() {
 //add event listener
 const genreFilterElement = document.getElementById('genreFilter');
 genreFilterElement.addEventListener('change', filterByGenre);
+
+//search function
+function searchBooks() {
+    let searchInput = document.getElementById('search').value.toLowerCase();
+    const filtered = books.filter(book => {
+        return (
+            book.title.toLowerCase().includes(searchInput) ||
+            book.author.toLowerCase().includes(searchInput) ||
+            book.genre.toLowerCase().includes(searchInput)
+        );
+    });
+    if (filtered.length === 0) {
+        const booksContainer = document.getElementById('booksContainer');
+        booksContainer.innerHTML = "<p>No items match your search</p>";
+    } else {
+        renderBooks(filtered);
+    }
+};
+//search event listener
+document.getElementById('search').addEventListener('input', searchBooks);
+

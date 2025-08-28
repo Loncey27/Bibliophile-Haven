@@ -4,15 +4,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Home | Bibliophile Haven</title>
   <script src="https://kit.fontawesome.com/2aaa300193.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+    rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 </head>
 
-<body class="bg-[#fdf6f0] text-lg font-[Open-Sans] text-[#3e3e3e]">
-
-  <!-- Navigation -->
+<body class="bg-gray-200 text-lg font-[Open-Sans]">
   <nav class="flex bg-white flex-wrap items-center justify-around py-4 shadow">
     <img class="w-34 h-20" src="logo.png" alt="Logo" />
     <div class="flex flex-wrap">
@@ -22,41 +22,11 @@
     </div>
   </nav>
 
-  <!-- Filters -->
-  <div class="flex flex-wrap items-center gap-4 m-6">
-    <input id="search"
-      class="px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#8c6642] w-full md:w-1/2"
-      type="search" placeholder="Search books..." />
+  <h1 class="m-4 text-2xl text-[#8c6642] font-bold">My Reading List</h1>
+  <div id="readingListContainer" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 m-6"></div>
 
-    <select id="authorFilter"
-      class="px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#8c6642] text-center">
-      <option value="-">All Authors</option>
-      <option value="Karla Hocker">Karla Hocker</option>
-      <option value="Frank Herbert">Frank Herbert</option>
-      <option value="Isaac Asimov">Isaac Asimov</option>
-      <option value="Jane Austen">Jane Austen</option>
-    </select>
-
-    <select id="genreFilter"
-      class="px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#8c6642] text-center">
-      <option value="">All Genres</option>
-      <option value="Romance">Romance</option>
-      <option value="Sci-Fi">Sci-Fi</option>
-    </select>
-  </div>
-
-  <!-- Book Cards -->
-  <div id="booksContainer" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 m-6">
- 
-  </div>
-
-  <!-- Modal -->
-  <div id="modal" class="hidden"></div>
-
-  <!-- Scripts -->
   <script src="mains.js"></script>
-  <script src="script.js"></script>
-
+  <script src="readinglist.js"></script>
 </body>
 <footer class="bg-[#f5f0ea] text-[#4b3b2b] py-10 mt-12 border-t border-[#d8cfc4]">
   <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
